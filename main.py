@@ -70,6 +70,7 @@ def admin_login():
     add_new_student, list_all_students, search_students, remove_student and display_single_record
     """
     user_id = input("Please enter the admin id: ")
+    print()
     user_password = input("Please enter the admin password: ")
     record = None
     if data.get(int(user_id)):
@@ -82,7 +83,7 @@ def admin_login():
         else:
             print('student cannot access this system.')
             print("Please try again")
-            menu()
+            admin_login()
 
     else:
         print("no id found")
